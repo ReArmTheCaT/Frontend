@@ -1,26 +1,32 @@
 <template>
 <div class="main">
     <div>
-        <table cellspacing="0">
-            <tr>
-                <td id="first">My Profile</td>     
-            </tr>
-            <tr>
-                <td id="highlight">Dashboard</td>     
-            </tr>
-            <tr>
-                <td>Orders</td>  
-            </tr>
-            <tr>
-                <td>Address</td>  
-            </tr>
-            <tr>
-                <td>Account details</td>    
-            </tr>
-            <tr>
-                <td id="btmb">Logout</td>     
-            </tr>
-        </table>
+        <div class="tabletop">
+            <h1>My Profile</h1>
+        </div>
+        <div id="highlight">
+            <nuxt-link to="/MyAccountDashboard" class="black">
+            Dashboard
+            </nuxt-link>
+        </div>
+        <div class="table">
+            <nuxt-link to="/MyAccountOrder" class="black">
+            Orders
+            </nuxt-link>
+        </div>
+        <div class="table">
+            <nuxt-link to="/MyAccountAddress" class="black">
+            Address
+            </nuxt-link>
+        </div>
+        <div class="table">
+            <nuxt-link to="/MyAccountDetails" class="black">
+            Account details
+            </nuxt-link>
+        </div>
+        <div id="btmb">
+            Logout
+        </div>
     </div>
     <div>
         <h1>Dashboard</h1>
@@ -29,28 +35,37 @@
             manage your shipping and billing addresses, and edit your password and account details.
         </p>
         <div class="box">
-            <div class="inthebox">
+            <div  v-for="item in Boxes" :key="item.Text" class="inthebox">
                 <div>
-                    <img src="~assets/pic/shopping-bag.png">
+                    <img v-bind:src="item.Img" alt="" id="miniimgFooter">
                 </div>
-                <h1>Orders</h1> 
-            </div>
-            <div class="inthebox">
-                <div>
-                    <img src="~assets/pic/map-pin.png">
-                </div>
-                <h1>Address</h1> 
-            </div>
-            <div class="inthebox">
-                <div>
-                    <img src="~assets/pic/user.png">
-                </div>
-                <h1>Acount details</h1> 
+                <h1>{{ item.Text }}</h1> 
             </div>
         </div>
     </div>
 </div>
 </template>
+<script>
+export default {
+  
+  data() {
+    return{
+      Boxes: [{
+        Text: 'Orders',
+        Img: '~assets/pic/shopping-bag.png',
+      },{
+        Text: 'Address',
+        Img: '~assets/pic/map-pin.png',
+      },{
+        Text: 'Acount details',
+        Img: '~assets/pic/user.png',
+      },
+      ],
+    }
+  }
+}
+</script>
+
 <style scoped>
 .main{
     width: 1440px;
@@ -81,38 +96,46 @@ img{
     height: 76px;
     margin-top: 47px;
 }
-table{
-    border: 1px solid #EBEBEB;
-    border-radius: 10px;
-    border-collapse: separate;
-    font-size: 15px;
-    color: #0B0B0C;
-    font-weight: normal;
+.tabletop{
+    width: 290px;
+    height: 77px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #0FAFE9;
 }
-td{
-    height: 65px;
+.tabletop h1{
+    color: #FFFFFF;
+    padding-top: 15px;
     padding-left: 25px;
+    font-size: 30px;
+}
+.table{
+    width: 290px;
+    height: 65px;
+    border: 1px solid #EBEBEB;
+    padding-left: 18px;
+    padding-top: 20px;
+}
+.black{
     color: #0B0B0C;
-    border-bottom: 1px solid #EBEBEB;
+}
+#btmb{
+    width: 290px;
+    height: 65px;
+    border: 1px solid #EBEBEB;
+    color: #FF1D0E;
+    padding-left: 18px;
+    padding-top: 20px;
+}
+#highlight{
+    width: 290px;
+    height: 65px;
+    border: 1px solid #EBEBEB;
+    background-color: rgba(15, 175, 233, 0.1);
+    padding-left: 18px;
+    padding-top: 20px;
 }
 p{
     color: #8786AD;
     padding: 16px 0px 30px 0px;
-}
-#btmb{
-    border: none;
-    color: #FF1D0E;
-    border-radius: 0px 0px 0px 9px;
-    width: 440px;
-}
-#first{
-    height: 77px;
-    font-size: 30px;
-    color: white;
-    background-color: #0FAFE9;
-    border-radius: 9px 9px 0px 0px;
-}
-#highlight{
-    background-color: rgba(15, 175, 233, 0.1);
 }
 </style>

@@ -6,7 +6,7 @@
 
 
 <script>
-import Address from '~/components/myAccount/Address.vue'
+import Address from '~/components/myAccount/Address'
 export default {
   components:{
     Address,

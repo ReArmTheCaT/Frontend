@@ -1,31 +1,19 @@
 <template>
     <div class="main">
-        <table cellspacing="0">
-            <tr>
-                <td id="first">Browse Categories</td>     
-            </tr>
-            <tr>
-                <td id="highlight">Home</td>     
-            </tr>
-            <tr>
-                <td>WordPress Themes</td>  
-            </tr>
-            <tr>
-                <td>eCommerce Templates</td>  
-            </tr>
-            <tr>
-                <td>Marketing Templates</td>    
-            </tr>
-            <tr>
-                <td>CMS Templates</td>  
-            </tr>
-            <tr>
-                <td>Site Templates</td>  
-            </tr>
-            <tr>
-                <td id="btmb">Blogging</td>     
-            </tr>
-        </table>
+        <div>
+            <div class="tabletop">
+                <h1>Browse Categories</h1>
+            </div>
+            <div  class="table" id="highlight">
+                Home
+            </div>
+            <div v-for="item in Cates" :key="item.cate" class="table">
+               {{ item.Cate }}
+            </div>
+            <div id="btmb">
+                Blogging
+            </div>
+        </div>
         <div class="sub">
             <h1>Subscribe Newsletter</h1>
             <p>Get all the latest information on Events, Sales and Offers.</p>
@@ -47,6 +35,27 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+  
+  data() {
+    return{
+      Cates: [{
+        Cate: 'WordPress Themes',
+      },{
+        Cate: 'eCommerce Templates',
+      },{
+        Cate: 'Marketing Templates',
+      },{
+        Cate: 'CMS Templates',
+      },{
+        Cate: 'Site Templates',
+      },
+      ],
+    }
+  }
+}
+</script>
 <style scoped>
 .main{
     width: 340px;
@@ -80,20 +89,32 @@
     align-items: center;
     text-align: center;
 }
-table{
-    border: 1px solid #EBEBEB;
-    border-radius: 10px;
-    border-collapse: separate;
-    font-size: 15px;
-    color: #0B0B0C;
-    font-weight: normal;
+.tabletop{
     width: 340px;
+    height: 77px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #0FAFE9;
 }
-td{
-    height: 65px;
+.tabletop h1{
+    color: #FFFFFF;
+    padding-top: 15px;
     padding-left: 25px;
-    color: #0B0B0C;
-    border-bottom: 1px solid #EBEBEB;
+    font-size: 30px;
+}
+.table{
+    width: 340px;
+    height: 65px;
+    border: 1px solid #EBEBEB;
+    padding-left: 18px;
+    padding-top: 20px;
+}
+#btmb{
+    width: 340px;
+    height: 65px;
+    border: 1px solid #EBEBEB;
+    border-radius: 0px 0px 10px 10px;
+    padding-left: 18px;
+    padding-top: 20px;
 }
 img{
     width: 340px;
@@ -145,11 +166,6 @@ button {
 }
 #highlight{
     background-color: rgba(15, 175, 233, 0.1);
-}
-#btmb{
-    border: none;
-    border-radius: 0px 0px 0px 9px;
-    width: 440px;
 }
 .ads p{
     font-size: 15px;

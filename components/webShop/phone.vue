@@ -15,8 +15,7 @@
             </div>
         </div>
         <div>
-            <img src="~assets/pic/phone1.png">
-            <img src="~assets/pic/phone2.png">
+            <img src="~assets/pic/phone.png">
         </div>
     </div>
 </template>
@@ -68,7 +67,7 @@ button {
   margin-left: 40px;
 }
 img{
-    width: 315px;
-    height: 315px;
+    width: 600px;
+    height: 358px;
 }
 </style>

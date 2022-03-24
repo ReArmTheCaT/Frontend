@@ -1,107 +1,103 @@
 <template>
     <div>
         <div class="top">
-            <div>
-                <h1>Security Assurance</h1>
-                <p>Our theme architecture is designed for maximize security and prevent malware, Dos Attack other. </p>
-            </div>
-            <div>
-                <h1>Best Customer Support</h1>
-                <p>Need help? We're here for you! Do not worry we provide in depth answer. </p>
-            </div>
-            <div>
-                <h1>Great Quality Theme</h1>
-                <p>We will be responsible for delivering the best online user experience, which makes my role extremely important.</p>
+            <div v-for="item in Boxes" :key="item.Header">
+                <h1>{{ item.Header }}</h1>
+                <p>{{ item.Content }}</p>
             </div>
         </div>
         <div class="line">
-            <div>
-                <img src="~assets/pic/image1.png">
-                <h1>RubICons</h1>
-                <p id="gray">PHP, Wordpress</p>
-                <p id="blue">$29,99</p>
-            </div>
-            <div>
-                <div  id="asd">
-                    <img src="~assets/pic/image2.png" id="imgSelect">
-                    <div class="selected">
-                        <img src="~assets/pic/eye.png" id="miniimg">
-                        <img src="~assets/pic/shpcart.png" id="miniimg">
-                    </div>
-                </div>
-                <h1>RubICons</h1>
-                <p id="gray">PHP, Wordpress</p>
-                <p id="blue">$29,99</p>
-            </div>
-            <div>
-                <img src="~assets/pic/image3.png">
-                <h1>RubICons</h1>
-                <p id="gray">PHP, Wordpress</p>
-                <p id="blue">$29,99</p>
-            </div>
-        </div>
-        <div class="line">
-            <div>
-                <img src="~assets/pic/image4.png">
-                <h1>RubICons</h1>
-                <p id="gray">PHP, Wordpress</p>
-                <p id="blue">$29,99</p>
-            </div>
-            <div>
-                <img src="~assets/pic/image5.png">
-                <h1>RubICons</h1>
-                <p id="gray">PHP, Wordpress</p>
-                <p id="blue">$29,99</p>
-            </div>
-            <div>
-                <img src="~assets/pic/image6.png">
-                <h1>RubICons</h1>
-                <p id="gray">PHP, Wordpress</p>
-                <p id="blue">$29,99</p>
-            </div>
-        </div>
-        <div class="line">
-            <div>
-                <img src="~assets/pic/image7.png">
-                <h1>RubICons</h1>
-                <p id="gray">PHP, Wordpress</p>
-                <p id="blue">$29,99</p>
-            </div>
-            <div>
-                <img src="~assets/pic/image8.png">
-                <h1>RubICons</h1>
-                <p id="gray">PHP, Wordpress</p>
-                <p id="blue">$29,99</p>
-            </div>
-            <div>
-                <img src="~assets/pic/image9.png">
-                <h1>RubICons</h1>
-                <p id="gray">PHP, Wordpress</p>
-                <p id="blue">$29,99</p>
-            </div>
-        </div>
-        <div class="line">
-            <div>
-                <img src="~assets/pic/image10.png">
-                <h1>RubICons</h1>
-                <p id="gray">PHP, Wordpress</p>
-                <p id="blue">$29,99</p>
-            </div>
-            <div>
-                <img src="~assets/pic/image11.png">
-                <h1>RubICons</h1>
-                <p id="gray">PHP, Wordpress</p>
-                <p id="blue">$29,99</p>
-            </div>
-            <div>
-                <img src="~assets/pic/image12.png">
-                <h1>RubICons</h1>
-                <p id="gray">PHP, Wordpress</p>
-                <p id="blue">$29,99</p>
+            <div v-for="item in Pictures" :key="item.Header">
+                <img v-bind:src="item.Img" alt="" id="miniimgFooter">
+                <h1 class="Pic">{{ item.Header }}</h1>
+                <p id="gray">{{ item.Cate }}</p>
+                <p id="blue">{{ item.Price }}</p>
             </div>
         </div>
     </div>
 </template>
+<script>
+export default {
+  
+  data() {
+    return{
+      Boxes: [{
+        Header: 'Security Assurance',
+        Content: 'Our theme architecture is designed for maximize security and prevent malware, Dos Attack other. ',
+      },{
+        Header: 'Best Customer Support',
+        Content: 'Need help? We’re here for you! Do not worry we provide in depth answer. ',
+      },{
+        Header: 'Great Quality Theme',
+        Content: 'We will be responsible for delivering the best online user experience, which makes my role extremely important.',
+      },
+      ],
+      Pictures:[{
+          Img:'~assets/pic/Image1.png',
+          Header: 'RubICons',
+          Cate: 'PHP, Wordpress',
+          Price: '$29,99',
+      },{
+          Img:'~assets/pic/Image2.png',
+          Header: 'DugiLan',
+          Cate: 'PHP, Wordpress',
+          Price: '$29,99',
+      },{
+          Img:'~assets/pic/Image3.png',
+          Header: 'Abstract Theme',
+          Cate: 'PHP, Wordpress',
+          Price: '$29,99',
+      },{
+          Img:'~assets/pic/Image4.png',
+          Header: 'DugiCon',
+          Cate: 'PHP, Wordpress',
+          Price: '$29,99',
+      },{
+          Img:'~assets/pic/Image5.png',
+          Header: 'DugiApp',
+          Cate: 'PHP, Wordpress',
+          Price: '$29,99',
+      },{
+          Img:'~assets/pic/Image6.png',
+          Header: 'DugiOS',
+          Cate: 'PHP, Wordpress',
+          Price: '$29,99',
+      },{
+          Img:'~assets/pic/Image7.png',
+          Header: 'DugiUI',
+          Cate: 'PHP, Wordpress',
+          Price: '$29,99',
+      },{
+          Img:'~assets/pic/Image8.png',
+          Header: 'WireDugi',
+          Cate: 'PHP, Wordpress',
+          Price: '$29,99',
+      },{
+          Img:'~assets/pic/Image9.png',
+          Header: 'Dugico',
+          Cate: 'PHP, Wordpress',
+          Price: '$29,99',
+      },{
+          Img:'~assets/pic/Image10.png',
+          Header: 'UI Illustrations',
+          Cate: 'PHP, Wordpress',
+          Price: '$29,99',
+      },{
+          Img:'~assets/pic/Image11.png',
+          Header: 'Login Apps',
+          Cate: 'PHP, Wordpress',
+          Price: '$29,99',
+      },{
+          Img:'~assets/pic/Image12.png',
+          Header: 'Analysis app',
+          Cate: 'PHP, Wordpress',
+          Price: '$29,99',
+      },
+      ]
+    }
+  }
+}
+</script>
 <style scoped>
 .top{
     width: 863px;
@@ -150,6 +146,10 @@ img{
     left: 30%;
     /* transform: translate(-50%,-50%); */
 }
+.Pic:hover{
+    color: #0FAFE9;
+    cursor: pointer;
+}
 #blue{
     font-size: 15px;
     color: #0FAFE9;
@@ -157,6 +157,7 @@ img{
 #gray{
     font-size: 12px;
     color: #B9B9B9;
+    text-transform: uppercase;
 }
 #imgSelect{
     width: 276px;

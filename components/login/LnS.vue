@@ -4,20 +4,20 @@
       <h1>Login</h1>
       <h2>USERNAME OR EMAIL ADDRESS</h2>
       <div class="inputBox">
-        <p>sabrihakuli@outlook.com</p>
+        <a-input placeholder="sabrihakuli@outlook.com" size="large"/>
       </div>
       <h2>PASSWORD</h2>
       <div class="inputBox">
-        <p>********************</p>
+        <a-input placeholder="********************" size="large"/>
       </div>
       <div class="remember">
         <div>
             <button>LOGIN TO YOUR ACCOUNT</button>
         </div>
-        <div class="checkbox">
-        </div>
         <div>
-            <p id="textremem">Remember me</p>
+            <a-checkbox @change="onChange">
+                Remember me
+            </a-checkbox>
         </div>
       </div>
       <p>Lost your password?</p>
@@ -27,7 +27,7 @@
       <h1>Register</h1>
       <h2>USERNAME OR EMAIL ADDRESS</h2>
       <div class="inputBox">
-        <p>sabrihakuli@outlook.com</p>
+        <a-input placeholder="sabrihakuli@outlook.com" size="large"/>
       </div>
       <p>
         A password will be sent to your email address.<br /><br />
@@ -53,15 +53,15 @@
 .inputBox {
   height: 60px;
   width: 500px;
-  border: 1px solid #ebebeb;
+  /* border: 1px solid #ebebeb;
   display: grid;
   align-items: center;
   border-radius: 7px;
-  margin-bottom: 30px;
+  margin-bottom: 30px; */
 }
 .remember{
     display: grid;
-    grid-template-columns: 276px 30px 1fr;
+    grid-template-columns: 276px 1fr;
     align-items: center;
     padding-bottom: 20px;
 }

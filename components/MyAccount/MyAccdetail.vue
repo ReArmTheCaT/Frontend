@@ -1,26 +1,32 @@
 <template>
     <div class="main">
         <div>
-            <table cellspacing="0">
-            <tr>
-                <td id="first">My Profile</td>     
-            </tr>
-            <tr>
-                <td>Dashboard</td>     
-            </tr>
-            <tr>
-                <td>Orders</td>  
-            </tr>
-            <tr>
-                <td>Address</td>  
-            </tr>
-            <tr>
-                <td id="highlight">Account details</td>    
-            </tr>
-            <tr>
-                <td id="btmb">Logout</td>     
-            </tr>
-        </table>
+            <div class="tabletop">
+                <h1>My Profile</h1>
+            </div>
+            <div class="table">
+                <nuxt-link to="/MyAccountDashboard" class="black">
+                Dashboard
+                </nuxt-link>
+            </div>
+            <div class="table">
+                <nuxt-link to="/MyAccountOrder" class="black">
+                Orders
+                </nuxt-link>
+            </div>
+            <div class="table">
+                <nuxt-link to="/MyAccountAddress" class="black">
+                Address
+                </nuxt-link>
+            </div>
+            <div id="highlight">
+                <nuxt-link to="/MyAccountDetails" class="black">
+                Account details
+                </nuxt-link>
+            </div>
+            <div id="btmb">
+                Logout
+            </div>
         </div>
         <div>
             <h1>Account Details</h1>
@@ -28,32 +34,32 @@
                 <h2>FIRST NAME</h2>
                 <h2>LAST NAME</h2>
                 <div class="blueBox">
-                    <p>Sabri</p>
+                    <a-input placeholder="Sabri" size="large"/>
                 </div>
                 <div class="redBox">
-                    <p>Last Name</p>
+                    <a-input placeholder="Last Name" size="large"/>
                 </div>
             </div>
             <h2>DISPLAY NAME</h2>
             <div class="inputBox">
-                <p>Sabri Hakuli</p>
+                <a-input placeholder="Sabri Hakuli" size="large"/>
             </div>
             <h2>EMAIL ADDRESS</h2>
             <div class="inputBox">
-                <p>sabrihakuli@outlook.com</p>
+                <a-input placeholder="sabrihakuli@outlook.com" size="large"/>
             </div>
             <h1 id="h1">Change Password</h1>
             <h2>CURRENT PASSWORD</h2>
             <div class="inputBox">
-                <p>********</p>
+                <a-input placeholder="********" size="large"/>
             </div>
             <h2>NEW PASSWORD</h2>
             <div class="inputBox">
-                <p>**************</p>
+                <a-input placeholder="**************" size="large"/>
             </div>
             <h2>COMFIRM NEW PASSWORD</h2>
             <div class="inputBox">
-                <p>**************</p>
+                <a-input placeholder="**************" size="large"/>
             </div>
             <div class="lastbtn">
                 <button>SAVE CHANGES</button>
@@ -75,34 +81,28 @@
 .inputBox {
   height: 60px;
   width: 880px;
-  border: 1px solid #ebebeb;
   display: grid;
   align-items: center;
   border-radius: 7px;
   margin-bottom: 30px;
-  padding-left: 25.85px;
   color: #B9B9B9;
 }
 .blueBox{
     height: 60px;
     width: 420px;
-    border: 1px solid #0FAFE9;
     display: grid;
     align-items: center;
     border-radius: 7px;
     margin-bottom: 30px;
-    padding-left: 25.85px;
     color: #0B0B0C;
 }
 .redBox{
     height: 60px;
     width: 420px;
-    border: 1px solid #FF1D0E;
     display: grid;
     align-items: center;
     border-radius: 7px;
     margin-bottom: 30px;
-    padding-left: 25.85px;
     color: #B9B9B9;
 }
 .lastbtn{
@@ -128,20 +128,7 @@ button {
   border-radius: 10px;
   font-size: 15px;
 }
-table{
-    border: 1px solid #EBEBEB;
-    border-radius: 10px;
-    border-collapse: separate;
-    font-size: 15px;
-    color: #0B0B0C;
-    font-weight: normal;
-}
-td{
-    height: 65px;
-    padding-left: 25px;
-    color: #0B0B0C;
-    border-bottom: 1px solid #EBEBEB;
-}
+
 h2 {
   color: #636363;
   font-size: 12px;
@@ -154,21 +141,43 @@ h1{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-#btmb{
-    border: none;
-    color: #FF1D0E;
-    border-radius: 0px 0px 0px 9px;
-    width: 440px;
-}
-#first{
+.tabletop{
+    width: 290px;
     height: 77px;
-    font-size: 30px;
-    color: white;
+    border-radius: 10px 10px 0px 0px;
     background-color: #0FAFE9;
-    border-radius: 9px 9px 0px 0px;
+}
+.tabletop h1{
+    color: #FFFFFF;
+    padding-top: 15px;
+    padding-left: 25px;
+    font-size: 30px;
+}
+.table{
+    width: 290px;
+    height: 65px;
+    border: 1px solid #EBEBEB;
+    padding-left: 18px;
+    padding-top: 20px;
+}
+.black{
+    color: #0B0B0C;
+}
+#btmb{
+    width: 290px;
+    height: 65px;
+    border: 1px solid #EBEBEB;
+    color: #FF1D0E;
+    padding-left: 18px;
+    padding-top: 20px;
 }
 #highlight{
+    width: 290px;
+    height: 65px;
+    border: 1px solid #EBEBEB;
     background-color: rgba(15, 175, 233, 0.1);
+    padding-left: 18px;
+    padding-top: 20px;
 }
 #h1{
     padding-top: 20px;

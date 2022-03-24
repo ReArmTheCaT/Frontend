@@ -6,7 +6,7 @@
 
 
 <script>
-import MyAccdetail from '~/components/myAccount/MyAccdetail.vue'
+import MyAccdetail from '~/components/myAccount/MyAccdetail'
 export default {
   components:{
     MyAccdetail,

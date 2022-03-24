@@ -6,7 +6,7 @@
 
 
 <script>
-import orders from '~/components/myAccount/orders.vue'
+import orders from '~/components/myAccount/orders'
 export default {
   components:{
     orders,

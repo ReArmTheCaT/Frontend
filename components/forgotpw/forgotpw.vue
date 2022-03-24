@@ -7,7 +7,7 @@
         </div>
         <h2>USERNAME OR EMAIL</h2>
         <div class="inputBox">
-            <p>sabrihakuli@outlook.com</p>
+            <a-input placeholder="sabrihakuli@outlook.com" size="large"/>
         </div>
         <button>Reset password</button>
     </div>
@@ -22,11 +22,11 @@
 .inputBox {
     height: 60px;
     width: 500px;
-    border: 1px solid #EBEBEB;
+    /* border: 1px solid #EBEBEB;
     display: grid;
     align-items: center;
     border-radius: 7px;
-    margin-bottom: 30px;
+    margin-bottom: 30px; */
 }
 .text {
     height: 53px;

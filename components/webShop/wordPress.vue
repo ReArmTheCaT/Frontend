@@ -4,17 +4,19 @@
             <div>
                 <h1>More than 100 Wordpress Themes & Templates</h1>
                 <div class="textinput">
-                    <div class="white">
-                        <p>e.g Responsive slider</p>
-                    </div>
-                    <div class="blue">
-                        <p>SEARCH</p>
+                    <div>
+                        <a-input-search
+                        placeholder="e.g Responsive slider"
+                        enter-button="search"
+                        size="large"
+                        @search="onSearch"
+                        />
                     </div>
                 </div>
                 <p id="p20">From multipurpose themes to niche templates,you'll always find something that catches your eye.</p>
             </div>
             <div>
-                <img src="~assets/pic/Video2.png" id="img">
+                <img src="~assets/pic/Photos.png" id="img">
             </div>
         </div>
         <div class="blueText">
@@ -50,7 +52,6 @@
     height: 60px;
     width: 570px;
     display: grid;
-    grid-template-columns: 285px 1fr;
     margin: 45px 0px;
 }
 .white{
@@ -89,8 +90,8 @@ h1{
     color: #0B0B0C;
 }
 #img{
-    width: 428px;
-    height: 237px;
+    width: 610px;
+    height: 364px;
     border-radius: 10px;
 }
 .com{

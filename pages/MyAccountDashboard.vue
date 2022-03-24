@@ -6,7 +6,7 @@
 
 
 <script>
-import myAccDashB from '~/components/myAccount/myAccDashB.vue'
+import myAccDashB from '~/components/myAccount/myAccDashB'
 export default {
   components:{
     myAccDashB,
