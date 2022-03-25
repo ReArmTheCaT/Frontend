@@ -22,11 +22,7 @@
 .inputBox {
     height: 60px;
     width: 500px;
-    /* border: 1px solid #EBEBEB;
-    display: grid;
-    align-items: center;
-    border-radius: 7px;
-    margin-bottom: 30px; */
+    margin-bottom: 30px;
 }
 .text {
     height: 53px;

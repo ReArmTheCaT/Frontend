@@ -4,12 +4,13 @@
             <div>
                 <h1>More than 100 Wordpress Themes & Templates</h1>
                 <div class="textinput">
-                    <div>
+                    <div >
                         <a-input-search
                         placeholder="e.g Responsive slider"
                         enter-button="search"
                         size="large"
                         @search="onSearch"
+                        class="test"
                         />
                     </div>
                 </div>
@@ -65,6 +66,7 @@
     align-items: center;
     border-radius: 7px 0px 0px 7px;
 }
+
 .blue{
     height: 60px;
     width: 190px;
@@ -127,5 +129,12 @@ h1{
 #dell{
     height: 24px;
     width: 92px;
+}
+</style>
+<style>
+.test .ant-btn-lg{
+    height: 60px;
+    width: 190px;
+    background-color: #0FAFE9;
 }
 </style>

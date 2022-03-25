@@ -20,7 +20,7 @@
     </div>
     <div v-for="item in Products" :key="item.Product" class="tablePic">
       <div>
-        <img v-bind:src="item.img" alt="" id="miniimgFooter">
+        <img v-bind:src="item.Img" alt="" id="miniimgFooter">
         {{ item.Product }}
       </div>
       <div>
@@ -74,19 +74,19 @@ export default {
       ],
       Products: [{
         Product: 'WireDugi',
-        Img: '~assets/pic/Logo2.png',
+        Img: require('~/assets/pic/Logo2.png'),
         Price: '#2306',
         Quli: '1',
         Supt: '€ 89,99 ',
       },{
         Product: 'WireDugi',
-        Img: '~assets/pic/Logo2.png',
+        Img: require('~/assets/pic/Logo2.png'),
         Price: '#2306',
         Quli: '1',
         Supt: '€ 89,99 ',
       },{
         Product: 'WireDugi',
-        Img: '~assets/pic/Logo2.png',
+        Img: require('~/assets/pic/Logo2.png'),
         Price: '#2306',
         Quli: '1',
         Supt: '€ 89,99 ',

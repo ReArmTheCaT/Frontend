@@ -40,7 +40,7 @@
                 </div>
                 <div v-for="item in Products" :key="item.Product" class="tablePic">
                     <div>
-                        <img v-bind:src="item.img" alt="" id="miniimgFooter">
+                        <img v-bind:src="item.Img" alt="" id="miniimgFooter">
                         {{ item.Product }}
                     </div>
                     <div>
@@ -80,7 +80,7 @@ export default {
     return{
       Products: [{
         Product: 'WireDugi',
-        Img: '~assets/pic/Logo2.png',
+        Img: require('~/assets/pic/Logo2.png'),
         OrID: '#2306',
         Status: 'Processing',
         QTY: '1',
@@ -88,7 +88,7 @@ export default {
         Detail: 'DETAILS',
       },{
         Product: 'WireDugi',
-        Img: '~assets/pic/Logo2.png',
+        Img: require('~/assets/pic/Logo2.png'),
         OrID: '#2306',
         Status: 'Processing',
         QTY: '1',
@@ -215,36 +215,5 @@ button {
 #col1{
     width: 217px;
     padding-left: 28px;
-}
-#col2{
-    width: 97px;
-    text-align: left;
-}
-#col3{
-    width: 124px;
-}
-#col4{
-    width: 86px;
-    text-align: center;
-}
-#col5{
-    width: 92px;
-    text-align: right;
-}
-#col6{
-    width: 116px;
-}
-#col7{
-    width: 170px;
-}
-#center{
-   text-align: center;
-}
-#centerde{
-    text-align: center;
-    color: #525F7F;
-}
-#right{
-    text-align: right;
 }
 </style>

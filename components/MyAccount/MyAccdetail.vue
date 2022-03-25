@@ -33,33 +33,33 @@
             <div class="topBlock">
                 <h2>FIRST NAME</h2>
                 <h2>LAST NAME</h2>
-                <div class="blueBox">
-                    <a-input placeholder="Sabri" size="large"/>
+                <div>
+                    <a-input class="blueBox" placeholder="Sabri" size="large"/>
                 </div>
-                <div class="redBox">
-                    <a-input placeholder="Last Name" size="large"/>
+                <div>
+                    <a-input class="blueBox" placeholder="Last Name" size="large"/>
                 </div>
             </div>
             <h2>DISPLAY NAME</h2>
             <div class="inputBox">
-                <a-input placeholder="Sabri Hakuli" size="large"/>
+                <a-input class="inputBox" placeholder="Sabri Hakuli" size="large"/>
             </div>
             <h2>EMAIL ADDRESS</h2>
             <div class="inputBox">
-                <a-input placeholder="sabrihakuli@outlook.com" size="large"/>
+                <a-input class="inputBox" placeholder="sabrihakuli@outlook.com" size="large"/>
             </div>
             <h1 id="h1">Change Password</h1>
             <h2>CURRENT PASSWORD</h2>
             <div class="inputBox">
-                <a-input placeholder="********" size="large"/>
+                <a-input  class="inputBox" placeholder="********" size="large"/>
             </div>
             <h2>NEW PASSWORD</h2>
             <div class="inputBox">
-                <a-input placeholder="**************" size="large"/>
+                <a-input class="inputBox" placeholder="**************" size="large"/>
             </div>
             <h2>COMFIRM NEW PASSWORD</h2>
             <div class="inputBox">
-                <a-input placeholder="**************" size="large"/>
+                <a-input class="inputBox" placeholder="**************" size="large"/>
             </div>
             <div class="lastbtn">
                 <button>SAVE CHANGES</button>
@@ -95,15 +95,6 @@
     border-radius: 7px;
     margin-bottom: 30px;
     color: #0B0B0C;
-}
-.redBox{
-    height: 60px;
-    width: 420px;
-    display: grid;
-    align-items: center;
-    border-radius: 7px;
-    margin-bottom: 30px;
-    color: #B9B9B9;
 }
 .lastbtn{
     display: grid;

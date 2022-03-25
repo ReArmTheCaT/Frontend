@@ -11,7 +11,7 @@
                 </div>
                 <div v-for="item in Products" :key="item.Product" class="tablePic">
                     <div>
-                        <img v-bind:src="item.img" alt="" id="miniimgFooter">
+                        <img v-bind:src="item.Img" alt="" id="miniimgFooter">
                         {{ item.Product }}
                     </div>
                     <div>
@@ -37,6 +37,7 @@
                         enter-button="apply"
                         size="large"
                         @search="onSearch"
+                        class="inputSearch"
                         />
                     </div>
                     <div>
@@ -70,13 +71,13 @@ export default {
     return{
       Products: [{
         Product: 'WireDugi',
-        Img: '~assets/pic/Logo2.png',
+        Img: require('~/assets/pic/Logo2.png'),
         Price: '#2306',
         Quli: '1',
         Supt: '€ 89,99 ',
       },{
         Product: 'WireDugi',
-        Img: '~assets/pic/Logo2.png',
+        Img: require('~/assets/pic/Logo2.png'),
         Price: '#2306',
         Quli: '1',
         Supt: '€ 89,99 ',
@@ -203,5 +204,12 @@ button{
 #p{
     padding-left: 25px;
     color: #8786AD;
+}
+</style>
+<style>
+.inputSearch .ant-btn-lg{
+    background-color: #0FAFE91A;
+    color: #0FAFE9;
+    width: 142px;
 }
 </style>

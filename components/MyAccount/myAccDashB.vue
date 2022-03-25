@@ -52,13 +52,13 @@ export default {
     return{
       Boxes: [{
         Text: 'Orders',
-        Img: '~assets/pic/shopping-bag.png',
+        Img: require('~/assets/pic/shopping-bag.png'),
       },{
         Text: 'Address',
-        Img: '~assets/pic/map-pin.png',
+        Img: require('~/assets/pic/map-pin.png'),
       },{
         Text: 'Acount details',
-        Img: '~assets/pic/user.png',
+        Img: require('~/assets/pic/user.png'),
       },
       ],
     }

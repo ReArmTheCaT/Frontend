@@ -15,7 +15,7 @@
             <button>LOGIN TO YOUR ACCOUNT</button>
         </div>
         <div>
-            <a-checkbox @change="onChange">
+            <a-checkbox @change="onChange" class="blue">
                 Remember me
             </a-checkbox>
         </div>
@@ -53,11 +53,7 @@
 .inputBox {
   height: 60px;
   width: 500px;
-  /* border: 1px solid #ebebeb;
-  display: grid;
-  align-items: center;
-  border-radius: 7px;
-  margin-bottom: 30px; */
+  margin-bottom: 30px; 
 }
 .remember{
     display: grid;
