@@ -1,14 +1,19 @@
 <template>
     <div>
         <div class="top">
-            <div v-for="item in Boxes" :key="item.Header">
-                <h1>{{ item.Header }}</h1>
-                <p>{{ item.Content }}</p>
+            <div v-for="item in Boxes" :key="item.Header" class="top_pic">
+                <div class="blueBox">
+                    <img v-bind:src="item.Img" alt="" id="miniimgFooter">
+                </div>
+                <div>
+                    <h1>{{ item.Header }}</h1>
+                    <p>{{ item.Content }}</p>
+                </div>
             </div>
         </div>
         <div class="line">
             <div v-for="item in Pictures" :key="item.Header">
-                <img v-bind:src="item.Img" alt="" id="miniimgFooter">
+                <img v-bind:src="item.Img" alt="" class="img" >
                 <h1 class="Pic">{{ item.Header }}</h1>
                 <p id="gray">{{ item.Cate }}</p>
                 <p id="blue">{{ item.Price }}</p>
@@ -22,12 +27,15 @@ export default {
   data() {
     return{
       Boxes: [{
+        Img: require('~/assets/pic/top1.png'),
         Header: 'Security Assurance',
         Content: 'Our theme architecture is designed for maximize security and prevent malware, Dos Attack other. ',
       },{
+        Img: require('~/assets/pic/top2.png'),
         Header: 'Best Customer Support',
         Content: 'Need help? We’re here for you! Do not worry we provide in depth answer. ',
       },{
+        Img: require('~/assets/pic/top3.png'),
         Header: 'Great Quality Theme',
         Content: 'We will be responsible for delivering the best online user experience, which makes my role extremely important.',
       },
@@ -106,13 +114,13 @@ export default {
     border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding-left: 79px;
+    padding-left: 29px;
     /* margin-bottom: 48px; */
 }
 .top h1{
     font-size: 18px;
     color: #33334F;
-    padding: 48px 0px 10px 0px;
+    padding: 0px 0px 10px 0px;
     width: 190px;
     font-weight: bold;
 }
@@ -121,7 +129,19 @@ export default {
     color: #8786AD;
     width: 190px;
 }
-img{
+.top_pic{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    padding-top: 48px;
+}
+.blueBox{
+    width: 40px;
+    height: 40px;
+    background-color: #0FAFE91A;
+    border-radius: 10px;
+    padding: 8px 11px;
+}
+.img{
     width: 276px;
     height: 180px;
     border-radius: 10px;
@@ -153,6 +173,10 @@ img{
 #blue{
     font-size: 15px;
     color: #0FAFE9;
+}
+#miniimgFooter{
+    height: 17px;
+    width: 17px;
 }
 #gray{
     font-size: 12px;

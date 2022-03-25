@@ -5,12 +5,15 @@
                 <h1>Browse Categories</h1>
             </div>
             <div  class="table" id="highlight">
+                <img src="~assets/pic/icon1.png" id="miniimgFooter">
                 Home
             </div>
-            <div v-for="item in Cates" :key="item.cate" class="table">
-               {{ item.Cate }}
+            <div v-for="item in Cates" :key="item.Cate" class="table">
+                <img v-bind:src="item.Img" alt="" id="miniimgFooter">
+                {{ item.Cate }}
             </div>
             <div id="btmb">
+                <img src="~assets/pic/icon7.png" id="miniimgFooter">
                 Blogging
             </div>
         </div>
@@ -18,7 +21,8 @@
             <h1>Subscribe Newsletter</h1>
             <p>Get all the latest information on Events, Sales and Offers.</p>
             <div class="inputBox">
-                <p>Email address</p>
+                <img src="~assets/pic/fi_mail.png" id="miniimgFooter">
+                Email address
             </div>
             <button>SUBSCRIBE</button>
         </div>
@@ -42,14 +46,19 @@ export default {
     return{
       Cates: [{
         Cate: 'WordPress Themes',
+        Img: require('~/assets/pic/icon2.png'),
       },{
         Cate: 'eCommerce Templates',
+        Img: require('~/assets/pic/icon3.png'),
       },{
         Cate: 'Marketing Templates',
+        Img: require('~/assets/pic/icon4.png'),
       },{
         Cate: 'CMS Templates',
+        Img: require('~/assets/pic/icon5.png'),
       },{
         Cate: 'Site Templates',
+        Img: require('~/assets/pic/icon6.png'),
       },
       ],
     }
@@ -77,9 +86,14 @@ export default {
   border-radius: 7px;
   background-color: #FFFFFF;
   text-align: left;
-  padding: 16px 0px 20px 55px;
+  padding: 16px 0px 20px 25px;
   margin: 16px 0px 20px 16px;
   color: #B9B9B9;
+}
+#miniimgFooter{
+    height: 20px;
+    width: 20px;
+    margin-right: 15px;
 }
 .process{
     width: 340px;
